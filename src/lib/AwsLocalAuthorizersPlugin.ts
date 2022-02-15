@@ -43,7 +43,7 @@ export class AwsLocalAuthorizerPlugin {
 
         this.hooks = {
             "offline:local-authorizers:applyLocalAuthorizers": () => this.applyLocalAuthorizers(),
-            "after:offline:local-authorizers:start": () => this.serverless.pluginManager.run(["offline", "start"]),
+            "after:offline:local-authorizers:start": () => this.serverless.pluginManager.run(["offline"]),
         };
     }
 
